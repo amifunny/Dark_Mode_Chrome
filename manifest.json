@@ -1,0 +1,34 @@
+// This file is read by chrome
+// To get components detail and configurations
+{
+	"name":"Dark Chrome",
+	"description":"Chrome just got a lot darker!!",
+	"version":"1.0",
+	"manifest_version":2,
+	// All type of API permissions
+	"permissions":["activeTab","declarativeContent","storage"],
+	"browser_action":{
+		// Script to execute when extension clicked
+		"default_popup":"dark.html",
+		// Image used as Icon
+		"default_icon":"dark_chrome.png"
+
+	},
+	// Scripts live in background
+	// Browser read this file
+	// For events to listen to.
+	"background":{
+		"scripts":["background.js"],
+		"persistent":true
+	},
+	"commands":{
+		"_execute_browser_action":{
+			"suggested_key":{
+				// Keys that pop this extension
+				"default":"Ctrl+Shift+Q",
+				"mac":"Ctrl+Shift+Q"	
+			},
+			"description":"Activate Dark Mode"
+		}	
+	}
+}
