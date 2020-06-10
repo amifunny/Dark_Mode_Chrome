@@ -4,7 +4,7 @@ A chrome extension for applying Dark Mode, that is to make background dark and t
 Its super light and simple, i mean it has only one button :)
 Use Ctrl+Shift+Q to activate Dark Mode.
 
-Not on Chrome Store. But if you use, follow these steps.
+Not on Chrome Store. But if you want to use, follow these steps.
 1) Go to `More tools` using menu button on top-right.
 2) Hover and Click `Extensions`.
 or Simply type `chrome://extensions` in url bar.
