@@ -1,16 +1,22 @@
 :root{
-	--slider_height:26px;
-	--slider_width:70px;
+	--switch_height:26px;
+	--switch_width:70px;
+	--theme_color:#ff9900;
 }
 
 body{
-	width: 120px;
+	width: 150px;
 	margin: 0;
 }
 
 .content-div{
-	margin: 20% 0;
+	padding-bottom:20%;
 }
+
+.switch-content{
+	margin: 10% 0;
+}
+
 
 .flex-center{
 	display: flex;
@@ -18,17 +24,45 @@ body{
 	align-items: center;
 }
 
-.main-text{
-	margin-bottom: 20%;
+.target-text{
+	font-size: 15px;
+	text-align: center;
+	margin: 2%;
+	padding: 10% 0;
+}
+
+.switch-text{
+	text-align: center;
 }
 
 .switch-div{
 	width: min-content;
     margin: auto;
+    margin-top: 5%;
+}
+
+.settings{
+	text-align: center;
+    margin-top: 10%;
+}
+
+.save-btn{
+	color: black;
+    background-color: #93787800;
+    border: 1px solid black;
+	padding: 0.3rem 1rem;
+	cursor: pointer;
+
+}
+
+.save-btn:focus{
+	color: black;
+    background-color: #93787800;
+    border: 1px solid black;
 }
 
 .maker-tag{
-	background-color: #ff9900;
+	background-color:var(--theme_color) ;
 	color:white;
 	text-align: center;
 	padding: 4px;
@@ -47,8 +81,8 @@ body{
 .switch{
 	position: relative;
 	display: inline-block;
-	height: var(--slider_height);
-	width: var(--slider_width);
+	height: var(--switch_height);
+	width: var(--switch_width);
 }
 
 .switch input{
@@ -58,35 +92,35 @@ body{
 	display: none;
 }
 
-.slider:before{
+.switch-span:before{
 	position: absolute;
 	content: "";
-	height: calc( var(--slider_height) - 3px );
-	width: calc( var(--slider_height) - 3px );
+	height: calc( var(--switch_height) - 3px );
+	width: calc( var(--switch_height) - 3px );
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background-color: black;
+	background-color: var(--theme_color);
 	transition: .4s;
 	margin: 3px
 }
 
-.slider{
+.switch-span{
 	position: absolute;
-	width: calc( var(--slider_width) - 3px );
-	height: calc( var(--slider_height) - 3px );
+	width: calc( var(--switch_width) - 3px );
+	height: calc( var(--switch_height) - 3px );
 	background-color: #ededed;
 	transition: .4s;
 	padding: 3px;
 }
 
-input:checked + .slider{
-	background-color: #4a4a4a;
+input:checked + .switch-span{
+	background-color: var(--theme_color);
 }
 
-.switch>input:checked + .slider:before{
-	transform: translateX( calc( var(--slider_width) - var(--slider_height) ) );
+.switch>input:checked + .switch-span:before{
+	transform: translateX( calc( var(--switch_width) - var(--switch_height) ) );
 	background-color: white;
 }
 

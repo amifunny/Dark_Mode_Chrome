@@ -9,7 +9,7 @@
 	"permissions":["activeTab","declarativeContent","storage"],
 	"browser_action":{
 		// Script to execute when extension clicked
-		"default_popup":"dark.html",
+		"default_popup":"popup/dark.html",
 		// Image used as Icon
 		"default_icon":"dark_chrome.png"
 	},
@@ -26,7 +26,7 @@
 	"content_scripts":[
 		{
 			"matches": ["http://*/*","https://*/*"],
-			"js":["contentScript.js"]
+			"js":["content/contentScript.js"]
 		}
 	],
 	"commands":{

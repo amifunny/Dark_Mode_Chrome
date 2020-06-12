@@ -11,14 +11,27 @@
 	<div class="content-div"> 
 		
 		<div class="flex-center">
+			<div style="width: 100%;">
+				<div id="target_text" class="target-text">Dark Mode</div>
+				<div class="switch-content">
+					<div class="switch-text">Click to Enable</div>
+					<div class="switch-div">	
+						<label class="switch">
+							<input id="switch_btn" type="checkbox">
+							<span class="switch-span"></span>
+						</label>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+		<div class="settings">
+			<div>Change colors</div>
 			<div>
-				<div class="main-text">Enable Dark Mode</div>
-				<div class="switch-div">	
-					<label class="switch">
-						<input id="switch_btn" type="checkbox">
-						<span class="slider"></span>
-					</label>
-				</div>	
+				<input id="color_slider" type="range" max="255" min="0" step="1" value="255" name="">
+			</div>	
+			<div>
+				<button id="save_setting" class="save-btn">Save</button>
 			</div>
 		</div>
 
