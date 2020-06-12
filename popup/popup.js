@@ -18,6 +18,7 @@ function apply_show_color( range ){
 
 }
 
+// When popup is loaded, restore configurations
 document.addEventListener("DOMContentLoaded",function(){
 	
 	chrome.storage.sync.get(['darkModeOn','backgroundColor','textColor'],function(data){
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 });
 
-
+// When slider is changed, we capture its value
 color_slider.addEventListener('input',function(){
 	
 	bgColorRange = parseInt( color_slider.value );
@@ -77,6 +78,7 @@ function execute_script(codeStr){
 
 }
 
+// Change Mode and the stored variable.
 btn.onclick = function(){
 
 	codeStr = "";
