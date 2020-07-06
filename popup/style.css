@@ -46,6 +46,10 @@ body{
     margin-top: 10%;
 }
 
+.color-slider-div{
+	margin: 0.5rem 0;
+}
+
 .save-btn{
 	color: black;
     background-color: #93787800;
